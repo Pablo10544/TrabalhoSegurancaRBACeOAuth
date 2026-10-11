@@ -1,21 +1,19 @@
 # oauthproject
-
-To install dependencies:
-
+Esse projeto foi feito para implementar o Oauth2.0 do google em conjunto com o RBAC, tendo três papeis configurados:
+Visitante, Aluno e professor.
+## Como rodar
+Instale as dependências:
 ```bash
 bun install
 ```
-
-To run:
+preencha o .env com os campos:
+```
+GOOGLE_CLIENT_ID=google_client_id
+GOOGLE_CLIENT_SECRET=google_client_secret
+GOOGLE_REDIRECT_URI=http://localhost:3000/callback
+```
+Para rodar:
 
 ```bash
-bun run index.ts
+bun --env-file=process.env index.ts   
 ```
-
-To type check:
-
-```bash
-bun check
-```
-
-This project was created using `bun init` in bun v1.4.3. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
